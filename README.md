@@ -2,7 +2,7 @@
 
 ## Version
 
-v2.0-β (01/03/2022) - First version released on GitHub
+v2.1-β (01/03/2022) - First version released on GitHub
 
 ## Intro
 
