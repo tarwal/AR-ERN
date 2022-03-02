@@ -23,7 +23,7 @@ To initiate the AR-ERN code use the command
 > python3 run.py
 ```
 This will create a new folder */AR-ERN_output/* with the data output files and a log file with a copy of the *run.py* file and the on-screen messages printed during the run.
-During the evaluation it will:
+During the evaluation it will:  
 1. read the input file with the atomic coordinates,
 2. create a grid with given number of cells embedding the system,
 3. decide if each cell is empty or filled with matter in a certain phase,
