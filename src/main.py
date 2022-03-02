@@ -7,14 +7,22 @@ start_time = time.time()
 #
 # 
 i=1
-while coordinate_file[-i] != '/':
+while coordinate_file[-i] != '/' and i<len(coordinate_file):
 	i+=1
-if coordinate_file[-4::] == '.xyz':
-    coordinate_file_no_ext=coordinate_file[-i+1:].replace('.xyz','_')
-elif coordinate_file[-7::] == '.xyz.pe':
-    coordinate_file_no_ext=coordinate_file[-i+1:].replace('.xyz.pe','_')
+if coordinate_file[-i] == '/':
+    if coordinate_file[-4::] == '.xyz':
+        coordinate_file_no_ext=coordinate_file[-i+1:].replace('.xyz','_')
+    elif coordinate_file[-7::] == '.xyz.pe':
+        coordinate_file_no_ext=coordinate_file[-i+1:].replace('.xyz.pe','_')
+    else:
+        print('WARNING: THERE IS A PROBLEM WITH THE EXTENSION OF THE STRUCTURE FILE.')
 else:
-    print('WARNING: THERE IS A PROBLEM WITH THE EXTENSION OF THE STRUCTURE FILE.')
+    if coordinate_file[-4::] == '.xyz':
+        coordinate_file_no_ext=coordinate_file[-i:].replace('.xyz','_')
+    elif coordinate_file[-7::] == '.xyz.pe':
+        coordinate_file_no_ext=coordinate_file[-i:].replace('.xyz.pe','_')
+    else:
+        print('WARNING: THERE IS A PROBLEM WITH THE EXTENSION OF THE STRUCTURE FILE.')
 del i
 #
 log_file_name =coordinate_file_no_ext+'AR-ERN.log'
