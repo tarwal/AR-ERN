@@ -1,3 +1,5 @@
+<img src="input_example/AR-ERN_picture.png" alt="AR-ERN_picture" width="700"/>
+
 # AR-ERN
 
 ## Version
